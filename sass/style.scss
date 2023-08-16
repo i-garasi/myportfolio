@@ -2,6 +2,9 @@
 
 body {
   font-family: "Lato", "Noto Sans JP", sans-serif;
+  &.is-fixed {
+    overflow: hidden;
+  }
 }
 
 .button {
@@ -82,9 +85,15 @@ body {
     color: transparent;
     background: url(../img/bg_menu.png) center no-repeat;
     background-size: 100% auto;
+
+    &.is-checked {
+      background: url(../img/bg_menu-close.png) center no-repeat;
+      background-size: 100% auto;
+    }
   }
 
   &__contents {
+    display: none;
     height: calc(100vh - 76px);
     border-top: solid 1px color.$white;
     padding-top: 60px;
