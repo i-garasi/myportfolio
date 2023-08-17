@@ -57,12 +57,6 @@ body {
   width: 100%;
   z-index: 999;
 
-  &__nav-item {
-    & + & {
-      margin-top: 24px;
-    }
-  }
-
   &__container {
     position: relative;
   }
@@ -97,5 +91,37 @@ body {
     height: calc(100vh - 76px);
     border-top: solid 1px color.$white;
     padding-top: 60px;
+  }
+
+  &__nav-item {
+    & + & {
+      margin-top: 24px;
+    }
+  }
+}
+
+.fv {
+  position: relative;
+  &__contents {
+    position: absolute;
+    bottom: 26px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: url(../img/sp/bg_fv.png) center no-repeat;
+    background-size: 100% auto;
+    padding: 32px;
+  }
+  &__heading {
+    &-main {
+      display: block;
+      font-size: 36px;
+      letter-spacing: 0.1em;
+    }
+    &-sub{
+      display: block;
+      margin-top: 12px;
+      font-size: 14px;
+    }
   }
 }
