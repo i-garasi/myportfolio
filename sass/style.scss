@@ -176,6 +176,7 @@ body {
   }
 }
 
+// works
 .works {
   background-color: color.$bg-light;
   &__item {
@@ -197,5 +198,27 @@ body {
   &__item-link {
     text-decoration: underline;
     font-size: 12px;
+  }
+}
+
+// about
+.about {
+  &__container {
+  }
+  &__img {
+    margin-bottom: 32px;
+    img {
+      box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    }
+  }
+  &__text-contents {
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 1.6;
+
+    & + & {
+      margin-top: 1em;
+    }
   }
 }
