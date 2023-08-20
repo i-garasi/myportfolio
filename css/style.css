@@ -140,6 +140,9 @@ body.is-fixed {
           flex-direction: column;
   margin-bottom: 32px;
 }
+.section__head--center {
+  text-align: center;
+}
 .section__head-main {
   font-size: 36px;
   letter-spacing: 0.1rem;
@@ -259,4 +262,38 @@ body.is-fixed {
 .flow__item-text {
   font-size: 14px;
   line-height: 1.6;
+}
+
+.message__img {
+  margin-bottom: 32px;
+}
+.message__img img {
+  -webkit-box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+.message__text {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.page-bottom {
+  color: #fff;
+}
+.page-bottom__item {
+  padding: 40px;
+}
+.page-bottom__item--contact {
+  background-color: #6f6f6f;
+}
+.page-bottom__item--sns {
+  background-color: #4a4a4a;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px;
+}
+.footer__copy {
+  font-size: 11px;
+  font-family: "Noto Sans JP", sans-serif;
 }

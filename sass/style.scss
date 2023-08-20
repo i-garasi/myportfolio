@@ -136,6 +136,10 @@ body {
     display: flex;
     flex-direction: column;
     margin-bottom: 32px;
+
+    &--center {
+      text-align: center;
+    }
   }
   &__head-main {
     font-size: 36px;
@@ -266,3 +270,45 @@ body {
     line-height: 1.6;
   }
 }
+
+// message
+.message {
+  &__container {
+  }
+  &__img {
+    margin-bottom: 32px;
+    img {
+      box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    }
+  }
+  &__text-contents {
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+// page-bottom
+.page-bottom {
+  color: color.$white;
+  &__item {
+    padding: 40px;
+    &--contact {
+      background-color: color.$bg-gray-l;
+    }
+    &--sns {
+      background-color: color.$bg-dark;
+    }
+  }
+}
+
+  // footer
+  .footer {
+    text-align: center;
+    padding: 10px;
+    &__copy {
+      font-size: 11px;
+      font-family: "Noto Sans JP", sans-serif;
+    }
+  }
