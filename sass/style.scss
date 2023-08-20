@@ -1,4 +1,5 @@
 @use "color";
+@use "breakpoints";
 
 body {
   font-family: "Lato", "Noto Sans JP", sans-serif;
@@ -122,6 +123,11 @@ body {
     &-sub {
       margin-top: 12px;
       font-size: 14px;
+    }
+  }
+  &__img {
+    img {
+      width: 100%;
     }
   }
 }
@@ -303,12 +309,206 @@ body {
   }
 }
 
-  // footer
-  .footer {
-    text-align: center;
-    padding: 10px;
-    &__copy {
-      font-size: 11px;
-      font-family: "Noto Sans JP", sans-serif;
+// footer
+.footer {
+  text-align: center;
+  padding: 10px;
+  &__copy {
+    font-size: 11px;
+    font-family: "Noto Sans JP", sans-serif;
+  }
+}
+
+/*--------------------------------
+// pc
+--------------------------------*/
+
+@include breakpoints.mq(pc) {
+  .wrapper {
+    display: flex;
+  }
+
+  .header {
+    position: relative;
+    flex-basis: 20%;
+    padding: 50px 20px;
+
+    &__container {
+      width: 160px;
+      margin: 0 auto;
+      position: sticky;
+      top: 50px;
+    }
+
+    &__logo {
+      font-size: 25px;
+      letter-spacing: 0.12em;
+      line-height: 1;
+    }
+
+    &__menu-button {
+      display: none;
+    }
+
+    &__contents {
+      display: block;
+      border: none;
     }
   }
+
+  .button {
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: color.$white;
+
+      .button__icon-path {
+        fill: color.$bg-dark;
+      }
+
+      .button__text {
+        color: color.$bg-dark;
+      }
+    }
+
+    &--bg {
+      color: color.$bg-dark;
+
+      &:hover {
+        filter: brightness(0.7);
+      }
+    }
+  }
+
+  .section {
+    &__inner {
+      // 32 * 2は両サイドのpadding分
+      max-width: calc(880px + 32px * 2);
+      margin: 0 auto;
+    }
+
+    &__head {
+      margin-bottom: 24px;
+    }
+
+    &__head-main {
+      font-size: 60px;
+    }
+  }
+
+  .main {
+    flex-basis: 80%;
+  }
+
+  .fv {
+    &__contents {
+      background: url(../img/bg_fv.png) center no-repeat;
+      background-size: 100% auto;
+      bottom: 100px;
+      left: 0;
+      max-width: 627px;
+      height: 174px;
+      padding-top: 24px;
+      padding-left: 96px;
+    }
+  }
+
+  .service {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8%;
+    }
+
+    &__item {
+      & + & {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .works {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8%;
+    }
+
+    &__item {
+      & + & {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .about {
+    &__container {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 40px;
+    }
+
+    &__img {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+    }
+  }
+
+  .flow {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    &__item {
+      & + & {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .message {
+    &__container {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 40px;
+    }
+  }
+
+  .page-bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &__item {
+      padding: 54px 10px;
+    }
+  }
+}
+
+/*--------------------------------
+// tb
+--------------------------------*/
+
+@include breakpoints.mq(tb) {
+  .fv {
+    &__contents {
+      bottom: 50%;
+      transform: translateY(50%);
+    }
+  }
+
+  .section {
+    &__head-main {
+      font-size: 45px;
+    }
+  }
+  .flow {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 16px;
+    }
+  }
+}
