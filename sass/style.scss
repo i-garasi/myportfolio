@@ -3,6 +3,7 @@
 
 body {
   font-family: "Lato", "Noto Sans JP", sans-serif;
+  color: color.$cl-text;
   &.is-fixed {
     overflow: hidden;
   }
@@ -15,20 +16,6 @@ body {
   width: 180px;
   margin: 0 auto;
 
-  &--bg {
-    background-color: color.$white;
-    .button__text {
-      color: color.$bg-dark;
-    }
-  }
-
-  &--border {
-    border: 1px solid color.$white;
-    .button__text {
-      color: color.$white;
-    }
-  }
-
   &__icon {
     width: 24px;
     display: flex;
@@ -36,7 +23,7 @@ body {
   }
 
   &__icon-path {
-    fill: color.$white;
+    fill: color.$cl-section-title;
     &--contact {
       fill: color.$bg-dark;
     }
@@ -46,12 +33,12 @@ body {
     margin-left: 10px;
     font-size: 16px;
     letter-spacing: 0.08em;
-    color: color.$white;
+    color: color.$cl-text;
   }
 }
 
 .header {
-  background-color: color.$bg-dark;
+  background-color: color.$bg-light;
   position: fixed;
   top: 0;
   left: 0;
@@ -140,6 +127,7 @@ body {
   &__head-main {
     font-size: 36px;
     letter-spacing: 0.1rem;
+    color: color.$cl-section-title;
   }
   &__head-sub {
     font-size: 12px;
@@ -178,7 +166,6 @@ body {
 
 // works
 .works {
-  background-color: color.$bg-light;
   &__item {
     & + & {
       margin-top: 40px;
@@ -203,20 +190,16 @@ body {
 
 // about
 .about {
-  &__container {
-  }
   &__img {
     margin-bottom: 32px;
+    flex-basis: 80%;
     img {
-      box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+      border-radius: 50%;
     }
-  }
-  &__text-contents {
   }
   &__text {
     font-size: 14px;
     line-height: 1.6;
-
     & + & {
       margin-top: 1em;
     }
@@ -225,7 +208,6 @@ body {
 
 // flow
 .flow {
-  background-color: color.$bg-light;
   &__list {
     margin-top: 64px;
   }
@@ -243,7 +225,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     font-size: 24px;
-    background-color: color.$bg-dark;
+    background-color: color.$cl-border;
     color: color.$white;
     width: 40px;
     height: 40px;
@@ -269,33 +251,12 @@ body {
 
 // message
 .message {
-  &__container {
-  }
   &__img {
     margin-bottom: 32px;
-    img {
-      box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-    }
-  }
-  &__text-contents {
   }
   &__text {
     font-size: 14px;
     line-height: 1.6;
-  }
-}
-
-// page-bottom
-.page-bottom {
-  color: color.$white;
-  &__item {
-    padding: 40px;
-    &--contact {
-      background-color: color.$bg-gray-l;
-    }
-    &--sns {
-      background-color: color.$bg-dark;
-    }
   }
 }
 
@@ -322,12 +283,13 @@ body {
     position: relative;
     flex-basis: 20%;
     padding: 50px 20px;
+    border-right: 1px solid color.$cl-section-title;
 
     &__container {
       width: 160px;
       margin: 0 auto;
       position: sticky;
-      top: 50px;
+      top: 100px;
     }
 
     &__logo {
@@ -360,14 +322,6 @@ body {
         color: color.$bg-dark;
       }
     }
-
-    &--bg {
-      color: color.$bg-dark;
-
-      &:hover {
-        filter: brightness(0.7);
-      }
-    }
   }
 
   .section {
@@ -388,6 +342,7 @@ body {
 
   .main {
     flex-basis: 80%;
+    background-color: color.$bg-light;
   }
 
   .service {
@@ -422,7 +377,7 @@ body {
     &__container {
       display: flex;
       flex-direction: row-reverse;
-      gap: 40px;
+      gap: 50px;
     }
 
     &__img {
@@ -451,15 +406,6 @@ body {
       display: flex;
       flex-direction: row-reverse;
       gap: 40px;
-    }
-  }
-
-  .page-bottom {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
-    &__item {
-      padding: 54px 10px;
     }
   }
 }
