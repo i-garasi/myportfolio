@@ -194,7 +194,7 @@ body.is-fixed {
 }
 .flow__item {
   position: relative;
-  border: 1px solid #a98c5f;
+  border: 1px solid #dcc6b9;
   padding: 46px 16px 24px;
 }
 .flow__item + .flow__item {
@@ -207,7 +207,7 @@ body.is-fixed {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   font-size: 24px;
-  background-color: #a98c5f;
+  background-color: #dcc6b9;
   color: #fff;
   width: 40px;
   height: 40px;
