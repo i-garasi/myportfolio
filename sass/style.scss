@@ -49,12 +49,9 @@ body {
     position: relative;
   }
 
-  // &__logo {
-  //   display: inline-block;
-  //   padding: 14px 24px;
-  //   font-size: 20px;
-  //   color: color.$white;
-  // }
+  &__logo {
+    display: none;
+  }
 
   &__menu-button {
     border: none;
@@ -84,6 +81,29 @@ body {
   &__nav-item {
     & + & {
       margin-top: 24px;
+    }
+  }
+
+  &__sns {
+    &--link-container {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    &--text {
+      font-size: 16px;
+      letter-spacing: 0.1em;
+    }
+
+    &--link-list {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding-top: 16px;
+    }
+
+    &--icon-path {
+      fill: color.$cl-section-title;
     }
   }
 }
@@ -192,7 +212,6 @@ body {
 .about {
   &__img {
     margin-bottom: 32px;
-    flex-basis: 80%;
     img {
       border-radius: 50%;
     }
@@ -293,9 +312,8 @@ body {
     }
 
     &__logo {
-      font-size: 25px;
-      letter-spacing: 0.12em;
-      line-height: 1;
+      display: block;
+      padding-left: 20px;
     }
 
     &__menu-button {
@@ -306,20 +324,30 @@ body {
       display: block;
       border: none;
     }
+
+    &__sns {
+      &--link {
+        &:hover {
+          .header__sns--icon-path {
+            fill: color.$cl-border;
+          }
+        }
+      }
+    }
   }
 
   .button {
     transition: all 0.3s;
 
     &:hover {
-      background-color: color.$white;
+      background-color: color.$cl-border;
 
       .button__icon-path {
-        fill: color.$bg-dark;
+        fill: color.$white;
       }
 
       .button__text {
-        color: color.$bg-dark;
+        color: color.$white;
       }
     }
   }
@@ -383,6 +411,7 @@ body {
     &__img {
       display: flex;
       align-items: center;
+      margin-top: 80px;
       margin-bottom: 0;
     }
   }
@@ -427,6 +456,19 @@ body {
       font-size: 45px;
     }
   }
+
+  .about {
+    &__container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__img {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+  }
+
   .flow {
     &__list {
       display: grid;
